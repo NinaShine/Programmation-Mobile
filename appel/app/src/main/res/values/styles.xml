@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style pour les labels -->
+    <style name="LabelStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <!-- Style pour les champs de saisie -->
+    <style name="EditTextStyle">
+        <item name="android:background">@android:drawable/edit_text</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:hint">@color/hint_color</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <!-- Style pour le bouton -->
+    <style name="ButtonStyle">
+        <item name="android:backgroundTint">@color/primary_color</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+</resources>

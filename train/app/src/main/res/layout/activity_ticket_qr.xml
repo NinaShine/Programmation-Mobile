@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/backgroundColor">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/trainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Biller électronique"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkColor"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Numéro de billet -->
+    <TextView
+        android:id="@+id/ticketNumberTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <!-- QR Code -->
+    <ImageView
+        android:id="@+id/qrCodeImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:contentDescription="QR Code du billet"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/retour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:textSize="16sp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/backgroundColor"> <!-- ✅ Correction de l'attribut du thème -->
+
+    <!-- ✅ Titre -->
+    <TextView
+        android:id="@+id/trainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paiement sécurisé"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkColor"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- ✅ Champ numéro de carte -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="?attr/colorPrimary"
+        app:hintTextColor="?attr/colorPrimaryVariant"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_credit_card"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numéro de carte"
+            android:inputType="number"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ✅ Date d'expiration -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="?attr/colorPrimary"
+        app:hintTextColor="?attr/colorPrimaryVariant"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_date"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/expiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date d'expiration"
+            android:inputType="text"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- ✅ Champ CVV -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeColor="?attr/colorPrimary"
+        app:hintTextColor="?attr/colorPrimaryVariant"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_lock"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CVV"
+            android:inputType="numberPassword"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- ✅ Bouton Finaliser le paiement -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmPaymentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finaliser la commande"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="24dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+    <!-- ✅ Bouton Retour -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/retour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="24dp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

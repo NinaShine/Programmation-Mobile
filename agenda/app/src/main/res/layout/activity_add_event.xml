@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@color/backgroundColor">
+
+    <!-- Titre de la page -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajouter un événement"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryDarkColor"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Champ pour le titre de l'événement -->
+    <EditText
+        android:id="@+id/eventTitleInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:hint="Titre de l'événement"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:background="@android:drawable/edit_text"
+        android:textColorHint="@color/primaryDarkColor"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Champ pour le lieu -->
+    <EditText
+        android:id="@+id/eventLocationInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:hint="Lieu"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:background="@android:drawable/edit_text"
+        android:textColorHint="@color/primaryDarkColor"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Champ pour l'heure -->
+    <EditText
+        android:id="@+id/eventTimeInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:hint="Heure (ex: 14:30)"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:background="@android:drawable/edit_text"
+        android:textColorHint="@color/primaryDarkColor"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Sélecteur d'emoji -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choisissez un emoji"
+        android:textSize="18sp"
+        android:textColor="@color/primaryDarkColor"
+        android:paddingBottom="4dp"/>
+
+    <Spinner
+        android:id="@+id/emojiSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Bouton de confirmation -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:text="Ajouter l'événement"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

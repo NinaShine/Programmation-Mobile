@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <!-- Label pour Nom -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_name"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:layout_marginBottom="4dp"/>
+
+
+    <!-- Champ de saisie Nom -->
+    <EditText
+        android:id="@+id/Nom"
+        android:hint="@string/hint_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Label pour Prénom -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_surname"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Champ de saisie Prénom -->
+
+    <!-- Label pour Âge -->
+    <EditText
+        android:id="@+id/Prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="@string/hint_surname"
+        android:padding="12dp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_age"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Champ de saisie Âge -->
+    <EditText
+        android:id="@+id/Age"
+        android:hint="@string/hint_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="number"/>
+
+    <!-- Label pour Domaine de Compétences -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_competence"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Champ de saisie Domaine de compétences -->
+
+    <EditText
+        android:id="@+id/Competences"
+        android:hint="@string/hint_competence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Label pour Numéro de téléphone -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_phone"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- Champ de saisie Numéro de téléphone -->
+    <EditText
+        android:id="@+id/Telephone"
+        android:hint="@string/label_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/hint_color"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="phone"/>
+
+    <!-- Bouton Valider -->
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_validate"
+        android:textSize="18sp"
+        android:textColor="@color/button_text_color"
+        android:background="@drawable/button_selector"
+        android:padding="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

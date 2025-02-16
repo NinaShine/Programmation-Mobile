@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mon Application</string>
+    <string name="label_name">Nom</string>
+    <string name="button_validate">Valider</string>
+    <string name="hint_name">Entrez votre nom</string>
+    <string name="label_surname">Prénom</string>
+    <string name="hint_surname">Entrez votre prénom</string>
+    <string name="label_age">Âge</string>
+    <string name="hint_age">Entrez votre âge</string>
+    <string name="label_competence">Domaine de compétences</string>
+    <string name="hint_competence">Entrez votre domaine de compétences</string>
+    <string name="label_phone">Numéro de téléphone</string>
+</resources>

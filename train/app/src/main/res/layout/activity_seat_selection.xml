@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/backgroundColor">
+
+    <!-- ✅ Titre -->
+    <TextView
+        android:id="@+id/trainTitle"
+        android:layout_width="377dp"
+        android:layout_height="96dp"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Choisissez un siège pour votre trajet"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- ✅ ScrollView avec correctifs -->
+
+    <!-- ✅ Numéro du siège sélectionné -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:contentDescription="Sélectionnez un siège dans la grille ci-dessous"
+        android:fillViewport="true"
+        android:paddingBottom="16dp">
+
+        <GridLayout
+            android:id="@+id/seatGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:padding="8dp"
+            android:paddingTop="24dp" />
+    </ScrollView>
+
+    <TextView
+android:id="@+id/selectedSeatTextView"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Siège sélectionné : Aucun"
+android:textSize="18sp"
+android:textColor="@android:color/holo_blue_dark"
+android:gravity="center"
+android:paddingBottom="10dp"
+android:visibility="visible"/>
+
+<Button
+android:id="@+id/confirmButton"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Confirmer la réservation"
+android:backgroundTint="@color/primaryColor"
+android:textColor="@android:color/white"/>
+
+    <!-- ✅ Bouton Retour -->
+<Button
+android:id="@+id/retour"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Retour"
+android:backgroundTint="@color/primaryColor"
+android:textColor="@android:color/white"/>
+    </LinearLayout>

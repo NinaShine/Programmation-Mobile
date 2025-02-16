@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/background_color">
+
+    <!-- Ajout d'un titre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informations saisies"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_pink"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/textNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_pink"
+        android:padding="8dp"
+        android:background="@drawable/text_background"/>
+
+    <TextView
+        android:id="@+id/textPrenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_pink"
+        android:padding="8dp"
+        android:background="@drawable/text_background"/>
+
+    <TextView
+        android:id="@+id/textAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_pink"
+        android:padding="8dp"
+        android:background="@drawable/text_background"/>
+
+    <TextView
+        android:id="@+id/textDomaine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_pink"
+        android:padding="8dp"
+        android:background="@drawable/text_background"/>
+
+    <TextView
+        android:id="@+id/textPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_pink"
+        android:padding="8dp"
+        android:background="@drawable/text_background"/>
+
+    <!-- Bouton OK -->
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_pink"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Bouton Retour -->
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_pink"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

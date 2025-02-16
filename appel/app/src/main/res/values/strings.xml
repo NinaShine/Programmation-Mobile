@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="label_name">Last Name</string>
+    <string name="hint_name">Enter your last name</string>
+    <string name="label_surname">First name</string>
+    <string name="hint_surname">Enter your first name</string>
+    <string name="label_age">Age</string>
+    <string name="hint_age">Enter your age</string>
+    <string name="label_competence">Area of ​​expertise</string>
+    <string name="hint_competence">Enter your area of ​​expertise</string>
+    <string name="label_phone">Phone number</string>
+    <string name="button_validate">Validate</string>
+</resources>
