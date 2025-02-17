@@ -29,12 +29,9 @@ class ThirdActivity : ComponentActivity() {
 
         // Récupération du numéro de téléphone envoyé depuis SecondActivity
         val phoneNumber = intent.getStringExtra("PHONE")
-
-        // Affichage du numéro
         val textPhone = findViewById<TextView>(R.id.textPhone)
         textPhone.text = "Numéro : $phoneNumber"
 
-        // Bouton pour appeler
         val btnCall = findViewById<Button>(R.id.btnCall)
         btnCall.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL) // Intent Implicite pour composer le numéro
@@ -42,15 +39,12 @@ class ThirdActivity : ComponentActivity() {
             startActivity(intent)
         }
 
-        // Récupérer le bouton
         val btnRetourMain = findViewById<Button>(R.id.btnRetourMain)
-
-        // Ajouter un événement de clic pour retourner à MainActivity
         btnRetourMain.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
-            finish() // Ferme ThirdActivity pour éviter d'empiler les activités
+            finish() 
         }
     }
 }

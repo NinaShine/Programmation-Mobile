@@ -33,24 +33,24 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
 
-        // 📌 Récupération des éléments du layout
+        //Récupération des éléments du layout
         calendarView = findViewById(R.id.calendar)
         eventsRecyclerView = findViewById(R.id.eventsRecyclerView)
         currentDateText = findViewById(R.id.currentDateText)
         noEventsText = findViewById(R.id.noEventsText)
         addEventButton = findViewById(R.id.addEventButton)
 
-        // 📌 Configuration du RecyclerView pour afficher la liste des événements
+        //Configuration du RecyclerView pour afficher la liste des événements
         adapter = EventsAdapter(eventList) { position -> showDeleteConfirmationDialog(position) }
         eventsRecyclerView.layoutManager = LinearLayoutManager(this)
         eventsRecyclerView.adapter = adapter
 
-        // 📅 Date du jour par défaut
+        //Date du jour par défaut
         val today = Calendar.getInstance()
         selectedDate = getDateKey(today.get(Calendar.YEAR), today.get(Calendar.MONTH), today.get(Calendar.DAY_OF_MONTH))
         currentDateText.text = "Bonjour ! Nous sommes le ${formatDate(today.get(Calendar.DAY_OF_MONTH), today.get(Calendar.MONTH), today.get(Calendar.YEAR))}"
 
-        // 📌 Gestion du clic sur une date dans le calendrier
+        //Gestion du clic sur une date dans le calendrier
         calendarView.setOnCalendarDayClickListener(object : OnCalendarDayClickListener {
             override fun onClick(calendarDay: CalendarDay) {
                 val selectedCalendar = calendarDay.calendar
@@ -64,7 +64,7 @@ class MainActivity : ComponentActivity() {
         })
 
 
-        // ➕ Ajout d’un événement
+        // Ajout d’un événement
         addEventButton.setOnClickListener {
             val intent = Intent(this, AddEventActivity::class.java)
             intent.putExtra("selectedDate", selectedDate)
@@ -72,7 +72,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // 📌 Charger les événements pour une date sélectionnée
+    //Charger les événements pour une date sélectionnée
     private fun loadEventsForDate(date: String) {
         eventList = eventsMap[date] ?: mutableListOf()
         adapter.updateEvents(eventList)
@@ -81,7 +81,7 @@ class MainActivity : ComponentActivity() {
         noEventsText.visibility = if (eventList.isEmpty()) View.VISIBLE else View.GONE
     }
 
-    // 📌 Ajout d’un événement et mise à jour du calendrier
+    //Ajout d’un événement et mise à jour du calendrier
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE_ADD_EVENT && resultCode == RESULT_OK) {
@@ -97,7 +97,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // 📌 Suppression avec boîte de dialogue de confirmation
+    //Suppression avec boîte de dialogue de confirmation
     private fun showDeleteConfirmationDialog(position: Int) {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Confirmation")
@@ -110,7 +110,7 @@ class MainActivity : ComponentActivity() {
 
             Toast.makeText(this, "Événement supprimé", Toast.LENGTH_SHORT).show()
 
-            // ✅ Vérifier s'il reste des événements ce jour-là
+            // Vérifier s'il reste des événements ce jour-là
             if (eventList.isEmpty()) {
                 removeDateFromCalendar(selectedDate) // 🔴 Supprimer la couleur rouge si plus d'événements
             }
@@ -123,7 +123,7 @@ class MainActivity : ComponentActivity() {
         builder.show()
     }
 
-    // 📌 Enlever une date du calendrier si tous les événements sont supprimés
+    // Enlever une date du calendrier si tous les événements sont supprimés
     private fun removeDateFromCalendar(date: String) {
         val dateParts = date.split("-")
         val calendar = Calendar.getInstance().apply {

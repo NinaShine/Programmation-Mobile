@@ -21,15 +21,12 @@ class TicketQRCodeActivity : ComponentActivity() {
         val ticketNumberTextView = findViewById<TextView>(R.id.ticketNumberTextView)
         val returnButton = findViewById<Button>(R.id.retour)
 
-        // ✅ Générer un numéro de billet aléatoire
         val ticketNumber = "TICKET-" + Random.nextInt(100000, 999999)
         ticketNumberTextView.text = "Numéro de billet : $ticketNumber"
 
-        // ✅ Générer un QR Code à partir du numéro de billet
         val bitmap = generateQRCode(ticketNumber)
         qrCodeImageView.setImageBitmap(bitmap)
 
-        // ✅ Gestion du bouton "Retour"
         returnButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
@@ -38,7 +35,6 @@ class TicketQRCodeActivity : ComponentActivity() {
         }
     }
 
-    // ✅ Fonction pour générer un QR Code
     private fun generateQRCode(text: String): Bitmap {
         val width = 500
         val height = 500

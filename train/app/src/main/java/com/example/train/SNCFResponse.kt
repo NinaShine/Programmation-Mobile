@@ -17,12 +17,12 @@ data class Journey(
     @SerializedName("nb_transfers") val nbTransfers: Int,
     @SerializedName("sections") val sections: List<Section>,
     @SerializedName("fare") val fare: Fare? = null,
-    @SerializedName("tickets") val tickets: List<Ticket>? = null // ✅ Ajout des liens vers les billets
+    @SerializedName("tickets") val tickets: List<Ticket>? = null 
 ) : Parcelable
 
 @Parcelize
 data class Ticket(
-    @SerializedName("href") val href: String? // ✅ URL du billet
+    @SerializedName("href") val href: String? 
 ) : Parcelable
 
 
@@ -44,7 +44,7 @@ data class StopPoint(
 
 @Parcelize
 data class Fare(
-    @SerializedName("found") val found: Boolean?, // ✅ Ajout de `found`
+    @SerializedName("found") val found: Boolean?, 
     @SerializedName("total") val total: FareTotal?
 ) : Parcelable
 
@@ -52,5 +52,5 @@ data class Fare(
 @Parcelize
 data class FareTotal(
     @SerializedName("value") val value: String?,
-    @SerializedName("currency") val currency: String? // ✅ Ajout de la devise (EUR)
+    @SerializedName("currency") val currency: String? 
 ) : Parcelable

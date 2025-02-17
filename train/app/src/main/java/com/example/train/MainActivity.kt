@@ -70,7 +70,6 @@ class MainActivity : ComponentActivity() {
                         datetime = "${formattedDate}T000000"
                     )
 
-                    // ✅ Log de la réponse JSON complète
                     Log.d("SNCF API Response", results.toString())
 
                     withContext(Dispatchers.Main) {

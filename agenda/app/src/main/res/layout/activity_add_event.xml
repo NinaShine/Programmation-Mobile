@@ -6,8 +6,6 @@
     android:padding="24dp"
     android:gravity="center_horizontal"
     android:background="@color/backgroundColor">
-
-    <!-- Titre de la page -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +16,6 @@
         android:gravity="center"
         android:paddingBottom="16dp"/>
 
-    <!-- Champ pour le titre de l'événement -->
     <EditText
         android:id="@+id/eventTitleInput"
         android:layout_width="match_parent"
@@ -31,7 +28,6 @@
         android:textColorHint="@color/primaryDarkColor"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Champ pour le lieu -->
     <EditText
         android:id="@+id/eventLocationInput"
         android:layout_width="match_parent"
@@ -44,7 +40,6 @@
         android:textColorHint="@color/primaryDarkColor"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Champ pour l'heure -->
     <EditText
         android:id="@+id/eventTimeInput"
         android:layout_width="match_parent"
@@ -57,7 +52,6 @@
         android:textColorHint="@color/primaryDarkColor"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Sélecteur d'emoji -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,7 +68,6 @@
         android:padding="8dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Bouton de confirmation -->
     <Button
         android:id="@+id/confirmButton"
         android:layout_width="match_parent"

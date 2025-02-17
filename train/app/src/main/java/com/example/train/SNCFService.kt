@@ -32,7 +32,7 @@ object SNCFClient {
     val service: SNCFService = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(client)
-        .addConverterFactory(GsonConverterFactory.create()) // ✅ Ajout correct du parser JSON
+        .addConverterFactory(GsonConverterFactory.create()) 
         .build()
         .create(SNCFService::class.java)
 }

@@ -63,7 +63,7 @@ class MainActivity : ComponentActivity() {
         val editPhone = findViewById<EditText>(R.id.Telephone)
         val btnValider = findViewById<Button>(R.id.valider)
 
-        // Ajout du comportement au bouton de validation
+        // ici j'ajoute le comportement au bouton de validation
         btnValider.setOnClickListener {
             // Récupérer les valeurs saisies
             val nom = editNom.text.toString()
@@ -77,7 +77,7 @@ class MainActivity : ComponentActivity() {
                 .setTitle("Confirmation")
                 .setMessage("Voulez-vous valider votre saisie ?")
                 .setPositiveButton("Oui") { _, _ ->
-                    // ✅ Changer la couleur de fond des champs après validation
+                    //Changer la couleur de fond des champs après validation
                     val validatedColor = Color.parseColor("#D1C4E9") // Violet clair
                     editNom.setBackgroundColor(validatedColor)
                     editPrenom.setBackgroundColor(validatedColor)
@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
                     editDomaine.setBackgroundColor(validatedColor)
                     editPhone.setBackgroundColor(validatedColor)
 
-                    // ✅ Lancer la deuxième activité avec les données saisies
+                    // Lancer la deuxième activité avec les données saisies
                     val intent = Intent(this, SecondActivity::class.java).apply {
                         putExtra("NOM", nom)
                         putExtra("PRENOM", prenom)
@@ -96,11 +96,9 @@ class MainActivity : ComponentActivity() {
                     startActivity(intent)
                 }
                 .setNegativeButton("Annuler") { dialog, _ ->
-                    dialog.dismiss() // Fermer la boîte de dialogue sans rien faire
+                    dialog.dismiss() 
                 }
                 .create()
-
-            // ✅ Afficher la boîte de dialogue
             alertDialog.show()
         }
     }

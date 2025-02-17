@@ -9,7 +9,7 @@ import com.example.train.api.Journey
 
 class SNCFTrajetAdapter(
     private var trajets: List<Journey>,
-    private val onClick: (Journey) -> Unit // ✅ Ajout du paramètre pour le clic
+    private val onClick: (Journey) -> Unit 
 ) : RecyclerView.Adapter<SNCFTrajetAdapter.TrajetViewHolder>() {
 
     class TrajetViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -31,7 +31,6 @@ class SNCFTrajetAdapter(
         val heureDepart = "${trajet.departureDateTime.substring(9, 11)}h${trajet.departureDateTime.substring(11, 13)}"
         val heureArrivee = "${trajet.arrivalDateTime.substring(9, 11)}h${trajet.arrivalDateTime.substring(11, 13)}"
 
-        // ✅ Utilisation du prix aléatoire si non fourni
         val prix = if (trajet.fare?.total?.value != null && trajet.fare.total.value != "0.0") {
             "${trajet.fare.total.value} €"
         } else {
@@ -43,7 +42,6 @@ class SNCFTrajetAdapter(
         holder.heureTextView.text = "Départ : $heureDepart | Arrivée : $heureArrivee"
         holder.prixTextView.text = "Prix : $prix"
 
-        // ✅ Rendre chaque élément cliquable
         holder.itemView.setOnClickListener {
             onClick(trajet)
         }

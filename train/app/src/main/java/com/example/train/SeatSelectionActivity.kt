@@ -23,7 +23,7 @@ class SeatSelectionActivity : ComponentActivity() {
         val titleTextView = findViewById<TextView>(R.id.trainTitle)
         val seatGrid = findViewById<GridLayout>(R.id.seatGrid)
         val confirmButton = findViewById<Button>(R.id.confirmButton)
-        val retourButton = findViewById<Button>(R.id.retour) // ✅ Correction : Trouver le bon bouton
+        val retourButton = findViewById<Button>(R.id.retour) 
         val selectedSeatTextView = findViewById<TextView>(R.id.selectedSeatTextView)
 
         titleTextView.text = "Choisissez un siège pour ${trajet?.sections?.firstOrNull()?.from?.name} ➝ ${trajet?.sections?.lastOrNull()?.to?.name}"
@@ -65,25 +65,23 @@ class SeatSelectionActivity : ComponentActivity() {
             seatGrid.addView(seatImage)
         }
 
-        // ✅ Bouton de confirmation : Naviguer vers `SummaryActivity`
         confirmButton.setOnClickListener {
             if (selectedSeat == null) {
                 titleTextView.text = "Veuillez sélectionner un siège !"
                 titleTextView.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
             } else {
-                val randomPrice = (20..100).random() // ✅ Génère un prix aléatoire
+                val randomPrice = (20..100).random() 
                 val intent = Intent(this, SummaryActivity::class.java).apply {
                     putExtra("trajet", trajet)
                     putExtra("selectedSeat", selectedSeat)
-                    putExtra("prix", randomPrice) // ✅ Envoyer le prix généré
+                    putExtra("prix", randomPrice) 
                 }
                 startActivity(intent)
             }
         }
 
-        // ✅ Gestion du bouton "Retour" : Retour à la liste des trajets
         retourButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java) // ✅ Redirige vers la page des trajets
+            val intent = Intent(this, MainActivity::class.java) 
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish() // Ferme l'activité actuelle pour éviter d'empiler les pages

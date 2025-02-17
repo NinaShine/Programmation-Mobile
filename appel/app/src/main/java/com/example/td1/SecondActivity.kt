@@ -44,9 +44,6 @@ class SecondActivity : ComponentActivity() {
             }
             startActivity(intent)
         }
-
-
-        // Bouton Retour → Revient à `MainActivity`
         findViewById<Button>(R.id.btnRetour).setOnClickListener {
             finish() // Ferme l'activité et retourne à `MainActivity`
         }

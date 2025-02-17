@@ -27,12 +27,11 @@ class AddEventActivity : ComponentActivity() {
 
         val selectedDate = intent.getStringExtra("selectedDate")
 
-        // Options d'emoji
+        // Options d'emoji avec code des drapeau
         val emojis = listOf("🎉", "🎂", "📅", "🏆", "🎶", "🏖️", "\uD83C\uDDE9\uD83C\uDDFF ","\uD83C\uDDF1\uD83C\uDDE7")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, emojis)
         emojiSelector.adapter = adapter
 
-        // Sélectionner l'heure avec un `TimePicker`
         eventTimeInput.setOnClickListener {
             val calendar = Calendar.getInstance()
             val timePickerDialog = TimePickerDialog(
@@ -46,8 +45,6 @@ class AddEventActivity : ComponentActivity() {
             )
             timePickerDialog.show()
         }
-
-        // Ajouter l'événement
         confirmButton.setOnClickListener {
             val title = eventTitleInput.text.toString()
             val location = eventLocationInput.text.toString()
