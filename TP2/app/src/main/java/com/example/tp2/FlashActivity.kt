@@ -37,19 +37,17 @@ class FlashActivity : AppCompatActivity(), SensorEventListener {
         texteFlash = findViewById(R.id.text_flash)
         flashIcon = findViewById(R.id.flash_icon)
 
-        // Initialisation du gestionnaire de caméra
         cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
 
         try {
-            cameraId = cameraManager.cameraIdList[0] // Récupère l'ID de la caméra arrière
-            cameraManager.setTorchMode(cameraId!!, false) // Éteindre le flash au démarrage
-            updateFlashUI() // Mettre à jour l'interface
+            cameraId = cameraManager.cameraIdList[0]
+            cameraManager.setTorchMode(cameraId!!, false)
+            updateFlashUI()
         } catch (e: CameraAccessException) {
             e.printStackTrace()
             Toast.makeText(this, "Erreur d'accès au flash", Toast.LENGTH_SHORT).show()
         }
 
-        // Initialisation du capteur d'accéléromètre
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
@@ -59,10 +57,9 @@ class FlashActivity : AppCompatActivity(), SensorEventListener {
             sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_UI)
         }
 
-        // Bouton retour vers MainActivity
         btnFlash = findViewById(R.id.btn_back)
         btnFlash.setOnClickListener {
-            finish() // Retour à l'écran précédent
+            finish()
         }
     }
 
@@ -78,7 +75,7 @@ class FlashActivity : AppCompatActivity(), SensorEventListener {
             val now = System.currentTimeMillis()
             val elapsedTime = now - lastShakeTime
 
-            if (elapsedTime > 1000 && gForce > 3) { // Détection d'une secousse
+            if (elapsedTime > 1000 && gForce > 3) {
                 lastShakeTime = now
                 toggleFlash()
             }
@@ -96,7 +93,7 @@ class FlashActivity : AppCompatActivity(), SensorEventListener {
                     cameraManager.setTorchMode(it, true)
                     isFlashOn = true
                 }
-                updateFlashUI() // Mettre à jour l'interface
+                updateFlashUI()
             }
         } catch (e: CameraAccessException) {
             e.printStackTrace()
@@ -106,10 +103,10 @@ class FlashActivity : AppCompatActivity(), SensorEventListener {
     private fun updateFlashUI() {
         if (isFlashOn) {
             texteFlash.text = "Flash ON"
-            flashIcon.setImageResource(R.drawable.ic_flash_on) // Icône lorsque le flash est allumé
+            flashIcon.setImageResource(R.drawable.ic_flash_on)
         } else {
             texteFlash.text = "Flash OFF"
-            flashIcon.setImageResource(R.drawable.ic_flash_off) // Icône lorsque le flash est éteint
+            flashIcon.setImageResource(R.drawable.ic_flash_off)
         }
     }
 

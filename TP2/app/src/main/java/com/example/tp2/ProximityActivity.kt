@@ -23,7 +23,6 @@ class ProximityActivity : AppCompatActivity(), SensorEventListener {
         imageView = findViewById(R.id.image_view)
         proximityStatusText = findViewById(R.id.text_prox)
 
-        // Initialisation du capteur de proximité
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY)
 
@@ -33,10 +32,9 @@ class ProximityActivity : AppCompatActivity(), SensorEventListener {
             sensorManager.registerListener(this, proximitySensor, SensorManager.SENSOR_DELAY_NORMAL)
         }
 
-        // Bouton retour vers MainActivity
         val boutonBack: Button = findViewById(R.id.btn_back)
         boutonBack.setOnClickListener {
-            finish() // Retour à l'écran principal
+            finish()
         }
     }
 
@@ -46,10 +44,10 @@ class ProximityActivity : AppCompatActivity(), SensorEventListener {
             val distance = it.values[0]
 
             if (distance < proximitySensor!!.maximumRange.toFloat()) {
-                imageView.setImageResource(R.drawable.near_image) // Image pour la main proche
+                imageView.setImageResource(R.drawable.near_image)
                 proximityStatusText.text = "Votre main est proche"
             } else {
-                imageView.setImageResource(R.drawable.far_image) // Image pour la main loin
+                imageView.setImageResource(R.drawable.far_image)
                 proximityStatusText.text = "Loin"
             }
         }

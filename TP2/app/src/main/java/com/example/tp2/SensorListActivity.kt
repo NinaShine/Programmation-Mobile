@@ -16,7 +16,6 @@ class SensorListActivity : AppCompatActivity() {
         val sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         val sensorList: List<Sensor> = sensorManager.getSensorList(Sensor.TYPE_ALL)
 
-        // Convertir la liste des capteurs en objets SensorInfo pour notre CustomAdapter
         val sensorInfoList = sensorList.map { sensor ->
             SensorInfo(
                 name = sensor.name,

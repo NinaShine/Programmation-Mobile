@@ -31,11 +31,11 @@ class AccelerometerActivity : AppCompatActivity(), SensorEventListener {
         layout = findViewById(R.id.accelerometer_layout)
         accelerationText = findViewById(R.id.acceleration_text)
 
-        // Initialisation du SensorManager et de l'accéléromètre
+        // Initialisation du SensorManager et de l'accelerometre
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
-        // Vérifier si l'accéléromètre est disponible
+        // Verifier si l'accelerometre est disponible
         if (accelerometer == null) {
             layout.setBackgroundColor(Color.GRAY) // Couleur grise si aucun capteur n'est détecté
             accelerationText.text = "Aucun capteur d'accéléromètre détecté."
@@ -70,11 +70,8 @@ class AccelerometerActivity : AppCompatActivity(), SensorEventListener {
                 val z = it.values[2]
 
                 val acceleration = Math.sqrt((x * x + y * y + z * z).toDouble()).toFloat()
-
-                // Mise à jour du texte d'affichage
                 accelerationText.text = String.format("X: %.2f Y: %.2f Z: %.2f\nTotal: %.2f", x, y, z, acceleration)
 
-                // Définition des seuils
                 val newColor = when {
                     acceleration < 8.8 -> Color.GREEN // Faible mouvement
                     acceleration  < 12.0 -> Color.BLACK // Mouvement modéré
@@ -90,12 +87,12 @@ class AccelerometerActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // Pas utilisé ici
+        // Pas utilisé
     }
 
     private fun animateBackgroundColorChange(fromColor: Int, toColor: Int) {
         val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), fromColor, toColor)
-        colorAnimation.duration = 500 // Durée de transition en ms
+        colorAnimation.duration = 500
         colorAnimation.addUpdateListener { animator ->
             layout.setBackgroundColor(animator.animatedValue as Int)
         }

@@ -45,7 +45,6 @@ class SensorCheckActivity : AppCompatActivity() {
             unavailableSensors.joinToString("\n")
         }
 
-        // Bouton Retour
         val btnBack: Button = findViewById(R.id.btn_back)
         btnBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

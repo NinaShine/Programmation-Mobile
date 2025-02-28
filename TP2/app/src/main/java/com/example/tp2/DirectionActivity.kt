@@ -29,19 +29,16 @@ class DirectionActivity : AppCompatActivity(), SensorEventListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_direction)
 
-        // Récupération des éléments UI
         directionValue = findViewById(R.id.text_direction)
         imageLeft = findViewById(R.id.image_left)
         imageRight = findViewById(R.id.image_right)
         imageUp = findViewById(R.id.image_up)
         imageDown = findViewById(R.id.image_down)
-
         boutonBack = findViewById(R.id.bouton_back)
         boutonBack.setOnClickListener {
             finish()
         }
 
-        // Initialisation du capteur de rotation
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         rotationVectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
 
@@ -113,6 +110,6 @@ class DirectionActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // Pas utilisé ici
+        // Pas utilisé
     }
 }

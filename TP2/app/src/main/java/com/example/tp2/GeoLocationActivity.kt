@@ -40,8 +40,6 @@ class GeoLocationActivity : AppCompatActivity(), LocationListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-        // Configuration d'OpenStreetMap
         Configuration.getInstance().load(applicationContext, androidx.preference.PreferenceManager.getDefaultSharedPreferences(applicationContext))
 
         setContentView(R.layout.activity_geolocation)
@@ -53,10 +51,8 @@ class GeoLocationActivity : AppCompatActivity(), LocationListener {
         map.setBuiltInZoomControls(true)
         map.setMultiTouchControls(true)
 
-        // Initialisation du gestionnaire de localisation
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
-        // Vérifier si le GPS est activé
         if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             userLocation = getLocation()
             updateMap()
@@ -64,14 +60,12 @@ class GeoLocationActivity : AppCompatActivity(), LocationListener {
             promptEnableGPS()
         }
 
-        // Bouton pour rafraîchir la position
         val btnRefresh: Button = findViewById(R.id.btn_refresh_location)
         btnRefresh.setOnClickListener {
             userLocation = getLocation()
             updateMap()
         }
 
-        // Bouton retour vers MainActivity
         val btnBack: Button = findViewById(R.id.btn_back)
         btnBack.setOnClickListener {
             finish()
