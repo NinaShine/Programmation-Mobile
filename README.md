@@ -15,4 +15,4 @@
    git clone https://github.com/votre-repo.git
 
 Développé par [Salhi Nina]
-Projet réalisé dans le cadre du TP1 de développement 
+Projet réalisé dans le cadre du Module de développement Mobile
