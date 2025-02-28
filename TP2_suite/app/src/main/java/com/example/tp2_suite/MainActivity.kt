@@ -21,19 +21,19 @@ class MainActivity : AppCompatActivity(), ListePaysFragment.OnPaysSelectedListen
     }
 
     override fun onPaysSelected(pays: Pays) {
-        Log.d("MainActivity", "✅ Pays sélectionné : ${pays.nom}")
+        Log.d("MainActivity", "Pays sélectionné : ${pays.nom}")
 
         val detailFragment = supportFragmentManager.findFragmentById(R.id.fragment_detail) as? DetailPaysFragment
 
         if (detailFragment != null) {
-            Log.d("MainActivity", "✅ Mode tablette détecté")
+            Log.d("MainActivity", "Mode tablette détecté")
             detailFragment.afficherDetails(pays)
 
             // Rendre visible le fragment en mode tablette
             val detailContainer = findViewById<View>(R.id.fragment_detail)
             detailContainer.visibility = View.VISIBLE
         } else {
-            Log.d("MainActivity", "✅ Mode téléphone - Remplacement du fragment")
+            Log.d("MainActivity", "Mode téléphone - Remplacement du fragment")
 
             val bundle = Bundle().apply {
                 putParcelable("pays", pays)
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), ListePaysFragment.OnPaysSelectedListen
                 .addToBackStack(null)
                 .commit()
 
-            Log.d("MainActivity", "✅ Fragment DetailPaysFragment ajouté avec ${pays.nom}")
+            Log.d("MainActivity", "Fragment DetailPaysFragment ajouté avec ${pays.nom}")
         }
     }
 

@@ -16,14 +16,13 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        <!-- Image du drapeau -->
+        <!--  drapeau -->
         <ImageView
             android:id="@+id/pays_drapeau"
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:scaleType="fitCenter"/>
 
-        <!-- Informations du pays -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

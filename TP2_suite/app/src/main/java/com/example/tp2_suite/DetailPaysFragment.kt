@@ -36,10 +36,10 @@ class DetailPaysFragment : Fragment() {
         paysMonnaie = view.findViewById(R.id.detail_pays_monnaie)
         paysLangue = view.findViewById(R.id.detail_pays_langues)
 
-        // Gérer le bouton Retour
+        // bouton Retour
         val btnRetour = view.findViewById<Button>(R.id.btn_retour)
         btnRetour.setOnClickListener {
-            // Masquer le fragment de détails
+            // pour masquer le fragment de détails
             val detailContainer = requireActivity().findViewById<View>(R.id.fragment_detail)
             detailContainer.visibility = View.GONE
         }
