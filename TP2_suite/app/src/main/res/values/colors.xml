@@ -1,0 +1,27 @@
+<resources>
+    <color name="background_color">#FCE4EC</color> <!-- Rose très clair (Fond) -->
+    <color name="primary_color">#E91E63</color> <!-- Rose vif (Boutons, éléments principaux) -->
+    <color name="accent_color">#F06292</color> <!-- Rose clair (Accent, détails) -->
+    <color name="text_color">#880E4F</color> <!-- Rose foncé (Texte principal) -->
+    <color name="hint_color">#AD1457</color> <!-- Rose plus foncé (Hint, sous-texte) -->
+    <color name="button_text_color">#FFFFFF</color> <!-- Blanc (Texte des boutons) -->
+
+    <color name="background_pink">#FFE4E1</color>  <!-- Rose très clair -->
+    <color name="text_pink">#C2185B</color>  <!-- Rose foncé pour le texte -->
+    <color name="dark_pink">#880E4F</color>  <!-- Rose encore plus foncé -->
+    <color name="button_pink">#E91E63</color>  <!-- Rose vif pour les boutons -->
+    <color name="white">#FFFFFF</color>  <!-- Blanc -->
+    <color name="black">#000000</color>  <!-- Noir -->
+    <!-- il faut faire primary , Onprimary , surface , onsurface -->
+    <color name="primary">#E91E63</color> <!-- Rose vif -->
+    <color name="onPrimary">#FFFFFF</color> <!-- Blanc (texte sur fond primaire) -->
+
+    <color name="surface">#FCE4EC</color> <!-- Rose très clair -->
+    <color name="onSurface">#880E4F</color> <!-- Rose foncé -->
+
+</resources>
+
+
+
+
+

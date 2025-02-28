@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <!-- Carte contenant les informations du pays -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/pays_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <!-- Nom du pays -->
+            <TextView
+                android:id="@+id/detail_pays_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom du pays"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_pink"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Image du drapeau du pays -->
+            <ImageView
+                android:id="@+id/detail_pays_drapeau"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="fitCenter"/>
+
+            <!-- Informations du pays -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Capitale -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/detail_pays_capitale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capitale: ..."
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"/>
+                </LinearLayout>
+
+                <!-- Population -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/detail_pays_population"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Population: ..."
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"/>
+                </LinearLayout>
+
+                <!-- Région -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/detail_pays_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Région: ..."
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"/>
+                </LinearLayout>
+
+                <!-- Sous-région -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/detail_pays_sous_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sous-région: ..."
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"/>
+                </LinearLayout>
+
+                <!-- Langues -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/detail_pays_langues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Langues: ..."
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"/>
+                </LinearLayout>
+
+                <!-- Monnaie -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/detail_pays_monnaie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monnaie: ..."
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Bouton Retour -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="🔙 Retour"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        app:cornerRadius="16dp"
+        app:backgroundTint="@color/button_pink"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/pays_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

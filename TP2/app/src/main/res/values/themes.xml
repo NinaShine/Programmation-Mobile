@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MyApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Couleurs principales -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorAccent">@color/accent_color</item>
+
+        <!-- Couleurs du fond -->
+        <item name="android:colorBackground">@color/background_color</item>
+
+        <!-- Couleurs du texte -->
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+
+        <!-- Boutons -->
+        <item name="android:buttonStyle">@style/MyButtonStyle</item>
+    </style>
+
+    <!-- Style des boutons -->
+    <style name="MyButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:background">@color/button_pink</item>
+        <item name="android:textColor">@color/button_text_color</item>
+    </style>
+
+</resources>
