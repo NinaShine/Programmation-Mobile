@@ -76,7 +76,7 @@ class AccelerometerActivity : AppCompatActivity(), SensorEventListener {
 
                 // Définition des seuils
                 val newColor = when {
-                    acceleration < 9.8 -> Color.GREEN // Faible mouvement
+                    acceleration < 8.8 -> Color.GREEN // Faible mouvement
                     acceleration  < 12.0 -> Color.BLACK // Mouvement modéré
                     else -> Color.RED // Mouvement fort
                 }
