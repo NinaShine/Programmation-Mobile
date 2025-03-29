@@ -1,0 +1,30 @@
+<resources>
+    <!-- 🎨 Couleurs principales -->
+    <color name="primary">#E91E63</color>  <!-- Rose vif -->
+    <color name="primary_dark">#C2185B</color>  <!-- Rose foncé -->
+    <color name="accent">#F06292</color>  <!-- Rose clair -->
+    <color name="purple_500">#6200EE</color>  <!-- Violet foncé -->
+    <color name="purple_700">#3700B3</color>
+
+    <!-- 🎨 Couleurs de fond -->
+    <color name="background_color">#FCE4EC</color>  <!-- Rose très clair -->
+    <color name="surface">#FFFFFF</color>  <!-- Blanc -->
+    <color name="onSurface">#880E4F</color>  <!-- Rose foncé pour le texte -->
+
+    <!-- 🎨 Couleurs du texte -->
+    <color name="text_primary">#000000</color>  <!-- Noir -->
+    <color name="text_secondary">#880E4F</color>  <!-- Rose foncé -->
+    <color name="text_hint">#AD1457</color>  <!-- Rose plus foncé -->
+
+    <!-- 🎨 Boutons -->
+    <color name="button_pink">#E91E63</color>  <!-- Rose vif -->
+    <color name="button_text_color">#FFFFFF</color>  <!-- Blanc -->
+
+    <!-- 🎨 Checkbox et sélection -->
+    <color name="checkbox_color">#F06292</color>  <!-- Rose clair -->
+    <color name="checkbox_selected">#C2185B</color>  <!-- Rose foncé sélectionné -->
+
+    <!-- 🎨 Autres couleurs -->
+    <color name="white">#FFFFFF</color>  <!-- Blanc -->
+    <color name="black">#000000</color>  <!-- Noir -->
+</resources>

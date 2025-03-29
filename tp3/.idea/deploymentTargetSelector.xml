@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-03-02T16:01:59.236152886Z">
+        <DropdownSelection timestamp="2025-03-25T12:14:14.500231282Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=/home/nina/.android/avd/Small_Phone_API_35_2.avd" />

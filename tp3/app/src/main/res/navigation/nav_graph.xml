@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/inscriptionFragment">
+
+    <fragment
+        android:id="@+id/inscriptionFragment"
+        android:name="com.example.tp3.InscriptionFragment"
+        android:label="Inscription" >
+        <action
+            android:id="@+id/action_inscriptionFragment_to_affichageFragment"
+            app:destination="@id/affichageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/affichageFragment"
+        android:name="com.example.tp3.AffichageFragment"
+        android:label="Affichage" />
+</navigation>
